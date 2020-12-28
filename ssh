@@ -1,0 +1,16 @@
+    def test_ssh_login(self):
+        pp = pexpect.spawn("ssh", ["-l", "testuser", "localhost", "echo",
+                                   "foo"])
+
+        # Respond to password authentication and possible problem with hostkey.
+        while True:
+            ind = pp.expect([r"to continue connecting \(yes/no\)\? ",
+                             "password:"], timeout=10)
+            if ind == 0:
+                pp.send("yes\n")
+            elif ind == 1:
+                pp.send("foobar\n")
+                break
+
+        # Wait for output to finish.
+        pp.expect(pexpect.EOF)
