@@ -273,7 +273,6 @@ def perform_ssh_command_return_string(user, ip, passw, command):
         print("There was no output for this command")
 
 # HELPER 4
-
 def print_content(to_print, source):
     if source:
         print("SOURCE CONTENT")
@@ -287,7 +286,6 @@ def print_content(to_print, source):
         print("---------------------------------------------------")
 
 # HELPER 5
-
 def check_arguments_passed(var1, var2):
     if sys.argv[1] == '-v':
         originalContent=var1
