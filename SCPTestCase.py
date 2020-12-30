@@ -286,7 +286,7 @@ def print_content(to_print, source):
         print(to_print.strip())
         print("---------------------------------------------------")
 
-# HELPER 4
+# HELPER 5
 
 def check_arguments_passed(var1, var2):
     if sys.argv[1] == '-v':
