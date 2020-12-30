@@ -7,4 +7,4 @@ Variables either defined in the source code or defined when prompted for user in
 Can be used f.ex. for sending configuration files or script files, and checking for the file integrity once transferred.
 
 COMMAND LINE OPTIONS
-- use [ -v ] to have printed the original and searched transferred content upon making comparison  
+- use [ -v ] to have printed the original and transferred content upon making comparison  
