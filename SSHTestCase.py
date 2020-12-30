@@ -22,7 +22,7 @@ destinationFileName = "tf1.txt" # f.ex. transferred.txt
 destinationPassw = "hattis2"
 
 
-class SSHTestCase(unittest.TestCase):
+class SCPTestCase(unittest.TestCase):
 
     # Points [1]-[5] below are the functions that the test goes through in chronological order to complete the transfer and perform the test
     #****************************************************************************************[test_scp_file_transfer][MAIN]
