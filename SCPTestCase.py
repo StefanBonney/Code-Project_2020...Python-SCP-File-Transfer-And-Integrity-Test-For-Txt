@@ -71,6 +71,7 @@ class SCPTestCase(unittest.TestCase):
 
 #*--------------------------------------------------------------------------------------*[1][get_source_file]
 def get_source_file(sourceFileLocation):
+    print("\n")
     print("1. Getting information on source file")
 
     if sourceFileLocation:
@@ -132,7 +133,7 @@ def set_destination_path_variables(destinationFolderPath, destinationFileName, r
         
     # NO DESTINATION FOLDER LOCATION ASSIGNED TO VARIABLE
     else: 
-        uInput_Path = input("A path to transfer the file to has not been assigned, please input the directory path: (f.ex. /home/user/)")
+        uInput_Path = input("A path to transfer the file to has not been assigned, please input the directory path (f.ex. /home/user/): ")
     	# check that the folder location exists, otherwise inform user that it does not exist and ask if wants it to be created, or exit
         filePath = uInput_Path
         command1 = 'if test -d {filePath}; then echo "exist"; else echo "not exist"; fi'.format(filePath=filePath)
@@ -149,7 +150,7 @@ def set_destination_path_variables(destinationFolderPath, destinationFileName, r
         if destinationFileName:
             return filePath + destinationFileName
         else:
-            uInput_Name = input("A name for the transferred file has not been determined, please input the name (f.ex. transferred.txt: ") 
+            uInput_Name = input("A name for the transferred file has not been determined, please input the name (f.ex. transferred.txt): ") 
             return filePath + uInput_Name
 
 #*---------------------------------------------------------------------------------------*
@@ -234,10 +235,10 @@ def perform_ssh_command_return_boolean(user, ip, passw, command, valueToMatch):
     output=""
     stdin, stdout, stderr = client.exec_command(com)
 
-    print("ssh succuessful. Closing connection")
+    #print("ssh succuessful. Closing connection")
     stdout=stdout.readlines()
     client.close()
-    print("Connection closed")
+    #print("Connection closed")
 
     for line in stdout:
        output=output+line
@@ -259,10 +260,10 @@ def perform_ssh_command_return_string(user, ip, passw, command):
     output=""
     stdin, stdout, stderr = client.exec_command(com)
 
-    print("ssh succuessful. Closing connection")
+    #print("ssh succuessful. Closing connection")
     stdout=stdout.readlines()
     client.close()
-    print("Connection closed")
+    #print("Connection closed")
 
     for line in stdout:
         output=output+line
