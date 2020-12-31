@@ -1,0 +1,13 @@
+31.12.2021
+---------------------------------------------------------------------
+when trying to connect from an unknown computer with
+ssh/scp, pyexpect part of the code, requires verification that the
+fingerprint is known. Quick fix proposed below, however
+it is not as secure as should be, but the entire password
+mechanism needs to be changed to be more secure later on anyway.
+
+Add
+ssh -o "StrictHostKeyChecking no" root@10.x.x.x
+or
+StrictHostKeyChecking=accept-new
+---------------------------------------------------------------------
