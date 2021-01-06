@@ -11,3 +11,12 @@ ssh -o "StrictHostKeyChecking no" root@10.x.x.x
 or
 StrictHostKeyChecking=accept-new
 ---------------------------------------------------------------------
+
+31.12.2021
+---------------------------------------------------------------------
+when cloning the repository and running through docker without setting 
+any of the variables in the source code first, the file integrity 
+error check does not work, it fails to fetch one of the comparison objects.
+
+Need to investigate more on what causes the error
+---------------------------------------------------------------------
