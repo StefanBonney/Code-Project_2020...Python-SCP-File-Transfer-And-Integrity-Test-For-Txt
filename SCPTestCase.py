@@ -163,7 +163,7 @@ def transfer_file_with_scp(remoteAddress, sourceLocation, destinationPath, passw
     source = sourceLocation
     destination = remoteAddress + ":" + destinationPath
 
-    child = pexpect.spawn('scp {source} {destination}'.format(source=source,destination=destination))
+    child = pexpect.spawn('scp -o "StrictHostKeyChecking no" {source} {destination}'.format(source=source,destination=destination))
 
     while True:
         ind = child.expect([r"to continue connecting \(yes/no\)\? ", "password:"], timeout=10)
