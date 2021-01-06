@@ -1,4 +1,9 @@
-31.12.2021
+
+#####################################################################[RESOLVED]
+
+#####################################################################[FINETUNE]
+
+31.12.2020
 ---------------------------------------------------------------------
 when trying to connect from an unknown computer with
 ssh/scp, pyexpect part of the code, requires verification that the
@@ -12,11 +17,40 @@ or
 StrictHostKeyChecking=accept-new
 ---------------------------------------------------------------------
 
-31.12.2021
+#####################################################################[UNRESOLVED]
+
+06.01.2021
 ---------------------------------------------------------------------
 when cloning the repository and running through docker without setting 
 any of the variables in the source code first, the file integrity 
 error check does not work, it fails to fetch one of the comparison objects.
 
 Need to investigate more on what causes the error
+---------------------------------------------------------------------
+
+06.01.2021
+---------------------------------------------------------------------
+when using the Dockerfile_locally (as Dockerfile) image from docker hub
+it does not function, it gives an error and seems not to be able to load 
+past giving output, this may be because it is a local build of the dockerfile, 
+so changed the image to be a git clone within the dockerfile, which seems to work.
+
+However need to understand why the other version did not work. Refer to the difference of 
+Dockerfile_locally and Dockerfile - difference in theese if taken from Docker Hub
+
+*note: test that I was running with -it
+---------------------------------------------------------------------
+
+
+06.01.2021
+---------------------------------------------------------------------
+Currently when running from dockerhub it will not be able to get the file,
+this appeasrs to be because from docker hub it is not built in the same folder 
+as I am in with the command line, therefore the command COPY . . - will not copy 
+the contents of that folder to the container and so there is no file there for the 
+running program to find.
+
+One solution for this might be to only use a predetermined folder, such as 
+/home/DockerTransfer/ where all the files to be transferred are put, and having this 
+location hardcoded into the source code
 ---------------------------------------------------------------------
