@@ -1,4 +1,4 @@
-#============================================================================================================
+#========================================================================================================
 # Python-SCP-File-Transfer-And-Integrity-Test-For-Txt
 
 DESCRIPTION
@@ -9,9 +9,9 @@ Can be used f.ex. for sending configuration files or script files, and checking 
 
 COMMAND LINE OPTIONS
 - use [ -v ] to have printed the original and transferred content upon making comparison  
-#============================================================================================================
+#=======================================================================================================
 
-#============================================================================================================
+#======================================================================================================
 # Dockerfile
 
 To build from Dockerfile and run in Docker follow the following steps:
@@ -24,15 +24,15 @@ To build from Dockerfile and run in Docker follow the following steps:
 docker build -t scp .
 
 docker run -it scp
-#============================================================================================================
+#======================================================================================================
 
-#============================================================================================================
+#======================================================================================================
 # Docker Hub
 
 The file can also be run directly from Docker Hub with the command below. Please note that if running from Docker Hub it will not be possible to set the runtime variables such as remote host and paths beforehand, instead these must be set on runtime when prompted for them.
 
 NEED TO REVIEW WHOLE DOCKER PART OF README note: refer to issues doc on changes
-#============================================================================================================
+#======================================================================================================
 
 
 
