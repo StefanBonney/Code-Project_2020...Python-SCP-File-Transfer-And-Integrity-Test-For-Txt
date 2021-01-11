@@ -9,6 +9,7 @@ Can be used f.ex. for sending configuration files or script files, and checking 
 
 COMMAND LINE OPTIONS
 - use [ -v ] to have printed the original and transferred content upon making comparison  
+
 #=======================================================================================================
 
 #======================================================================================================
