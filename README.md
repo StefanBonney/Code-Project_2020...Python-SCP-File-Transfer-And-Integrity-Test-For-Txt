@@ -47,7 +47,8 @@ NEED TO REVIEW WHOLE DOCKER PART OF README note: refer to issues doc on changes
 #=======================================================================================
 
 #=======================================================================================
-# NOTES - RUNNING THE PROGRAMME THROUGH USER INPUT WITH VARIABLES SET THROUGH PROMPT
+# NOTES - Running the programme through user input with variables set through prompt 
+
 
 A typical run of the program, when the variables have not been set in the source code file, will look as following:
 
@@ -83,8 +84,7 @@ For point 4. above it is important to use the exact same format as shown in brac
 
 
 #=======================================================================================
-
-# NOTES - GENERAL USE NOTES
+# NOTES - General use notes
 
 The file to be compared needs to have some text content in it. Otherwise the script will fetch an empty object, and the test will fail as there is no object with which to make the comparison. 
 
