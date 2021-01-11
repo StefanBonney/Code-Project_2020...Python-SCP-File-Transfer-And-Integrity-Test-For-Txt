@@ -12,7 +12,7 @@ COMMAND LINE OPTIONS
 
 
 #=======================================================================================
-# Dockerfile
+## Dockerfile
 
 To build from Dockerfile and run in Docker follow the following steps:
 
@@ -31,7 +31,7 @@ docker run -it -v "$(pwd):/mydir" scp
 
 
 #=======================================================================================
-# Docker Hub
+## Docker Hub
 
 The file can also be run directly from Docker Hub with the command below. Please note that if running from Docker Hub it will not be possible to set the runtime variables such as remote host and paths beforehand, instead these must be set on runtime when prompted for them. It is also necessary to run the container with volume bind, as the image already contains the build from Dockerfile, and so no local copying will happen fro the Dockerfile. However,when running the container from Docker Hub with the command below, the folder from which the command is run is mirrored inside the container, thus it is possible to put a file into this local folder and access it for sending inside the container.docker run -it -v "$(pwd):/mydir" stefanbdocker/scp-test-case
 
@@ -39,7 +39,7 @@ docker run -it -v "$(pwd):/mydir" stefanbdocker/scp-test-case
 
 
 #=======================================================================================
-# NOTES - Running the programme through user input with variables set through prompt 
+#### NOTES - Running the programme through user input with variables set through prompt 
 
 
 A typical run of the program, when the variables have not been set in the source code file, will look as following:
@@ -74,7 +74,7 @@ For point 4. above it is important to use the exact same format as shown in brac
 
 
 #=======================================================================================
-# NOTES - General use notes
+#### NOTES - General use notes
 
 The file to be compared needs to have some text content in it. Otherwise the script will fetch an empty object, and the test will fail as there is no object with which to make the comparison. 
 
